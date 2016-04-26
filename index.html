@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+	<script type="text/javascript" src="jquery-1.12.3.min.js"></script>
+  	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+
+    <title>Guardias Lola</title>
+    
+<style type="text/css">	
+	
+	azul{
+		font-family: Times, Arial, Helvetica, sans-serif; 
+		font-size: 2em;
+		color: blue;				
+		}
+	
+	rojo{
+		font-family: Times, Arial, Helvetica, sans-serif; 
+		font-size: 2em;
+		color: red;				
+		}	
+
+      
+</style>    
+</head>
+
+<body onload="mostrarGuardias();">
+</body>
+</html>
+
+
+<!-- ------------------------------------------------------------------------------- -->
+<script type="text/javascript">      
+
+   
+	function sumarFecha(days){    	    	
+    	fecha=new Date(2016,2,13);
+    	
+    	tiempo=fecha.getTime();
+    	milisegundos=parseInt(days*24*60*60*1000);
+    	total=fecha.setTime(tiempo+milisegundos);
+
+    	return(fecha);
+	};
+
+
+	function mostrarGuardias(){
+		var i;		
+		var control=0;
+		var salto=0;
+
+		var month = new Array();
+		month[0] = "Enero";
+		month[1] = "Febrero";
+		month[2] = "Marzo";
+		month[3] = "Abril";
+		month[4] = "Mayo";
+		month[5] = "Junio";
+		month[6] = "Julio";
+		month[7] = "Agosto";
+		month[8] = "Septiembre";
+		month[9] = "Octobre";
+		month[10] = "Noviembre";
+		month[11] = "Diciembre";
+
+		hoy=new Date();		
+		document.write("<p ALIGN=center><font color=blue>Las siguientes guardias:</font></br></br>");
+		
+		for (i = 1; i < 50; i++) {			
+
+			if (control < 2)
+			{								
+				nueva_fecha=sumarFecha(salto);				
+				
+				dia=nueva_fecha.getDate();
+				dia_semana=nueva_fecha.getDay();	    		
+	    		mes = month[nueva_fecha.getMonth()];
+	    		year=nueva_fecha.getFullYear();	    		
+
+	    		if (nueva_fecha >= hoy)
+	    		{
+	    			if (dia_semana == 0)
+	    				document.write("<font color=red>" + dia + " de " + mes + " de " + year + "</font></br>");
+	    			else if (dia_semana == 6)
+	    				document.write("<font color=green>" + dia + " de " + mes + " de " + year + "</font></br>");
+	    			else
+	    				document.write(dia + " de " + mes + " de " + year +  "</br>");
+	    		}
+	    		
+			}
+
+			salto=salto+10;
+			control=control+1;
+			
+			if (control == 4)			
+				control=0;	    	
+			
+
+    	}
+    	document.write("</p");
+    };
+    
+    
+    
+
+</script>
