@@ -1,4 +1,4 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="org.mooc.tempMV" version="1.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="es.gauss.guardiasL" version="1.0.0">
   <name>Guardias de Lola</name>
   <description>Las siguientes guardias de Lola</description>
   <author email="avm.register@gmail.com">Antonio V M</author>
@@ -38,12 +38,6 @@
   <gap:plugin name="org.apache.cordova.network-information"/>
   <gap:plugin name="org.apache.cordova.splashscreen"/>
   <gap:plugin name="org.apache.cordova.vibration"/>
-  <icon src="icon.png"/>
-  <icon src="www/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
-  <icon src="www/icon-48-mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>
-  <icon src="www/icon-72-hdpi.png" gap:platform="android" gap:qualifier="hdpi"/>
-  <icon src="www/icon-96-xhdpi.png" gap:platform="android" gap:qualifier="xhdpi"/>
-  <icon src="www/icon-48.png" gap:platform="winphone"/>
-  <icon src="www/icon-173-tile.png" gap:platform="winphone" gap:role="background"/>
+  <icon src="icon.png"/>  
   <access origin="*"/>
 </widget>

@@ -65,7 +65,7 @@
 		month[11] = "Diciembre";
 
 		hoy=new Date();		
-		document.write("<p ALIGN=center><font color=blue>Las siguientes guardias:</font></br></br>");
+		document.write("<p ALIGN=center><font color=blue font size=5>Las siguientes guardias:</font></br></br>");
 		
 		for (i = 1; i < 50; i++) {			
 
@@ -81,11 +81,11 @@
 	    		if (nueva_fecha >= hoy)
 	    		{
 	    			if (dia_semana == 0)
-	    				document.write("<font color=red>" + dia + " de " + mes + " de " + year + "</font></br>");
+	    				document.write("<font color=red font size=5>" + dia + " de " + mes + " de " + year + "</font></br>");
 	    			else if (dia_semana == 6)
-	    				document.write("<font color=green>" + dia + " de " + mes + " de " + year + "</font></br>");
+	    				document.write("<font color=green font size=5>" + dia + " de " + mes + " de " + year + "</font></br>");
 	    			else
-	    				document.write(dia + " de " + mes + " de " + year +  "</br>");
+	    				document.write("<font size=5>" + dia + " de " + mes + " de " + year +  "</br>");
 	    		}
 	    		
 			}
