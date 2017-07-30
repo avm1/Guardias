@@ -5,7 +5,7 @@
   <content src="index.html"/>
   
   <preference name="permissions" value="none"/>
-<preference name="phonegap-version" value="cli-6.5.0" />
+  <preference name="phonegap-version" value="cli-6.5.0" />
   <preference name="orientation" value="default"/>
   <preference name="target-device" value="universal"/>
   <preference name="fullscreen" value="true"/>
@@ -20,24 +20,40 @@
   <preference name="disable-cursor" value="false"/>
   <preference name="android-minSdkVersion" value="7"/>
   <preference name="android-installLocation" value="auto"/>
-  <gap:plugin name="org.apache.cordova.battery-status"/>
-  <gap:plugin name="org.apache.cordova.camera"/>
-  <gap:plugin name="org.apache.cordova.media-capture"/>
-  <gap:plugin name="org.apache.cordova.console"/>
-  <gap:plugin name="org.apache.cordova.contacts"/>
-  <gap:plugin name="org.apache.cordova.device"/>
-  <gap:plugin name="org.apache.cordova.device-motion"/>
-  <gap:plugin name="org.apache.cordova.device-orientation"/>
-  <gap:plugin name="org.apache.cordova.dialogs"/>
-  <gap:plugin name="org.apache.cordova.file"/>
-  <gap:plugin name="org.apache.cordova.file-transfer"/>
-  <gap:plugin name="org.apache.cordova.geolocation"/>
-  <gap:plugin name="org.apache.cordova.globalization"/>
-  <gap:plugin name="org.apache.cordova.inappbrowser"/>
-  <gap:plugin name="org.apache.cordova.media"/>
-  <gap:plugin name="org.apache.cordova.network-information"/>
-  <gap:plugin name="org.apache.cordova.splashscreen"/>
-  <gap:plugin name="org.apache.cordova.vibration"/>
+
+  <gap:plugin name="org.apache.cordova.battery-status" source="npm"/>
+  <gap:plugin name="org.apache.cordova.camera" source="npm"/>
+  <gap:plugin name="org.apache.cordova.media-capture" source="npm"/>
+  <gap:plugin name="org.apache.cordova.console" source="npm"/>
+  <gap:plugin name="org.apache.cordova.contacts" source="npm"/>
+  <gap:plugin name="org.apache.cordova.device" source="npm"/>
+  <gap:plugin name="org.apache.cordova.device-motion" source="npm"/>
+  <gap:plugin name="org.apache.cordova.device-orientation" source="npm"/>
+  <gap:plugin name="org.apache.cordova.dialogs" source="npm"/>
+  <gap:plugin name="org.apache.cordova.file" source="npm"/>
+  <gap:plugin name="org.apache.cordova.file-transfer" source="npm"/>
+  <gap:plugin name="org.apache.cordova.geolocation" source="npm"/>
+  <gap:plugin name="org.apache.cordova.globalization" source="npm"/>
+  <gap:plugin name="org.apache.cordova.inappbrowser" source="npm"/>
+  <gap:plugin name="org.apache.cordova.media" source="npm"/>
+  <gap:plugin name="org.apache.cordova.network-information" source="npm"/>
+  <gap:plugin name="org.apache.cordova.splashscreen" source="npm"/>
+  <gap:plugin name="org.apache.cordova.vibration" source="npm"/>
+  <gap:plugin name="org.apache.cordova.splashscreen" source="npm"/>
+
+  <feature name="InAppBrowser">
+    <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+  </feature>
+
+  <access origin="tel:*" launch-external="yes" />
+  <access origin="mailto:*" launch-external="yes" />
+    
   <icon src="icon.png"/>  
+  
+  <plugin name="cordova-plugin-whitelist"  source="npm" />    
   <access origin="*"/>
+  <allow-navigation href="*" />
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+  
 </widget>
