@@ -3,6 +3,7 @@
   <description>Las siguientes guardias de Lola</description>
   <author email="avm.register@gmail.com">Antonio V M</author>
   <content src="index.html"/>
+  <platform name="android"></platform>
   
   <preference name="permissions" value="none"/>
   <preference name="phonegap-version" value="cli-6.5.0" />
